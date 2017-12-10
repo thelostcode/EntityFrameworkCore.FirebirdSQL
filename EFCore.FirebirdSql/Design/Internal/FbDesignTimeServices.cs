@@ -17,7 +17,8 @@
 using EntityFrameworkCore.FirebirdSql.Design.Internal;
 using EntityFrameworkCore.FirebirdSql.Scaffolding.Internal;
 using EntityFrameworkCore.FirebirdSql.Storage.Internal.Mapping; 
-using Microsoft.EntityFrameworkCore.Scaffolding; 
+using Microsoft.EntityFrameworkCore.Scaffolding;
+using Microsoft.EntityFrameworkCore.Scaffolding.Internal;
 using Microsoft.EntityFrameworkCore.Storage;  
 using Microsoft.Extensions.DependencyInjection;
 
@@ -29,7 +30,7 @@ namespace Microsoft.EntityFrameworkCore.Design.Internal
             => serviceCollection
                 .AddSingleton<IRelationalTypeMapper, FbTypeMapper>()
                 .AddSingleton<IDatabaseModelFactory, FbDatabaseModelFactory>()
-                .AddSingleton<IScaffoldingProviderCodeGenerator, FbScaffoldingCodeGenerator>()
+                .AddSingleton<IProviderCodeGenerator, FbScaffoldingCodeGenerator>()
                 .AddSingleton<IAnnotationCodeGenerator, FbAnnotationCodeGenerator>();
     }
 }

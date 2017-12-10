@@ -14,15 +14,14 @@
  *
  */
 
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Scaffolding;
 
 namespace EntityFrameworkCore.FirebirdSql.Scaffolding.Internal
 {
-    public class FbScaffoldingCodeGenerator : IScaffoldingProviderCodeGenerator
+    public class FbScaffoldingCodeGenerator : ProviderCodeGenerator
     {
-        public virtual string GenerateUseProvider(string connectionString, string language)
-        {
-            return $".UseFirebird(@\"{connectionString}\")";
-        }
+        public override string UseProviderMethod
+            => nameof(FbDbContextOptionsExtensions.UseFirebird);
     }
 }
