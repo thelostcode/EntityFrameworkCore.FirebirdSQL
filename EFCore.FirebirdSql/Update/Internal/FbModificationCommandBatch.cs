@@ -125,7 +125,8 @@ namespace EntityFrameworkCore.FirebirdSql.Update.Internal
                 sbExecuteBlock.Append(parameters);
                 sbExecuteBlock.AppendLine(") ");
             }
-            sbExecuteBlock.AppendLine("RETURNS (AffectedRows BIGINT) AS BEGIN");
+            // TODO: Fix with database dialect check.
+            sbExecuteBlock.AppendLine("RETURNS (AffectedRows INT) AS BEGIN");
             sbExecuteBlock.AppendLine("AffectedRows=0;");
             sbExecuteBlock.Append(sbCommands);
             sbExecuteBlock.AppendLine("END;");
