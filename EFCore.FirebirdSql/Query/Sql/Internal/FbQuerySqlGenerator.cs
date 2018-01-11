@@ -57,8 +57,16 @@ namespace EntityFrameworkCore.FirebirdSql.Query.Sql.Internal
                     Sql.AppendLine().Append("FIRST ").Append(1000000).Append(" ");
                 Sql.Append(" SKIP ");
                 Visit(selectExpression.Offset);
+                Sql.Append(" ");
             }
         }
+
+        /*
+        protected override void GenerateLimitOffset(SelectExpression selectExpression)
+        {
+            // ignored
+            // Firebird handles this in a different way. Check GenerateTop.
+        }*/
 
         protected override void GenerateProjection(Expression projection)
         {
