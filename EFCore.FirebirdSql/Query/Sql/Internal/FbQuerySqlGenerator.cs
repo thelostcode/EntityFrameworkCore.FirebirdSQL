@@ -61,12 +61,11 @@ namespace EntityFrameworkCore.FirebirdSql.Query.Sql.Internal
             }
         }
 
-        /*
         protected override void GenerateLimitOffset(SelectExpression selectExpression)
         {
             // ignored
             // Firebird handles this in a different way. Check GenerateTop.
-        }*/
+        }
 
         protected override void GenerateProjection(Expression projection)
         {
