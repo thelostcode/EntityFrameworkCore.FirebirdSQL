@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>EntityFrameworkCore.FirebirdSql</AssemblyName>
     <RootNamespace>EntityFrameworkCore.FirebirdSql</RootNamespace>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>EntityFramework.FIrebirdSQL.snk</AssemblyOriginatorKeyFile> 
+    <!--<SignAssembly>true</SignAssembly>-->
+    <!--<AssemblyOriginatorKeyFile>EntityFramework.FirebirdSQL.snk</AssemblyOriginatorKeyFile> -->
     <Copyright>Copyright © 2017 Rafael Almeida</Copyright>
     <Company>Ralms.net - ralms@ralms.net</Company>
     <Authors>Rafael Almeida</Authors>
